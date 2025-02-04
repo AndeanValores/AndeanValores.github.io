@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* fonts */
+@font-face {
+    font-family: 'ColorTube';
+    src: local('CT'), url('../assets/fonts/CT.woff');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+    }
+
+@font-face{
+    font-family: "Gotham Rounded Book";
+    src: url(../assets/fonts/Gotham\ Rounded\ Book.otf) format('embedded-opentype'), 
+        url(../assets/fonts/Gotham\ Rounded\ Book.otf) format('woff2'),         
+        url(../assets/fonts/Gotham\ Rounded\ Book.otf) format('woff'),      
+        url(../assets/fonts/Gotham\ Rounded\ Book.otf) format('truetype'),        
+        url(../assets/fonts/Gotham\ Rounded\ Book.otf) format('svg');    
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;          
+}
+
+@font-face{
+    font-family: "Gotham Rounded Medium";
+    src: url(../assets/fonts/Gotham\ Rounded\ Medium.otf);
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+/* variables*/
+:root {
+    --c-dark: #212529;
+    --c-body: #727272;
+    --c-main: #EC268F;
+    --c-main-rgb: 236,38,143;
+    --c-secondary: #8AA172;
+    --C-secondary-gray: #BDBFC1;
+    --c-dark: #212529;
+    --font-titles:"ColorTube";
+    --font-secondary:"Gotham Rounded Medium";
+    --font-base:"Gotham Rounded Book", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --transition: all 0.5s ease
+} 
+
+/* reset and helpers */
+body{
+  font-family: var(--font-base);
+  line-height: 1.7;
+  color: var(--c-body)
+}
+
+h1,h1,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6{
+  font-weight: 600;
+  color:var(--c-dark)
+}
+
+h1{
+  font-family: var(--font-secondary);
+}
+
+a{
+  text-decoration: none;
+  color: var(--c-main);
+  transition: var(--transition)
+}
+
+a:hover{
+  color: var(--c-secondary)
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.section-padding{
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.theme-shadow{
+  box-shadow: var(--box-shadow);
+}
+
+/*Navbar*/
+.navbar{
+  box-shadow: var(--box-shadow);
+}
+
+.navbar-nav .nav-link{
+  font-family: var(--font-secondary);
+  font-size: larger;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:active{
+  color: var(--c-main);
+}
+
+/*Button*/
+.btn{
+  font-weight: 600;
+  font-size: 20px;
+  font-family: var(--font-secondary);
+  padding: 10px 24px
+}
+
+.btn-color-1{
+  background-color: var(--c-main);
+  color: white;
+}
+
+.btn-color-1:hover{
+  background-color: white;
+  border-color: var(--c-main);
+  color: var(--c-main);
+}
+
+.btn-color-2{
+  background-color: var(--c-secondary);
+  color: white;
+}
+
+.btn-color-2:hover{
+  background-color: white;
+  border-color: var(--c-secondary);
+  color: var(--c-secondary)
+}
+
+/*Hero*/
+#hero{
+  background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.438)), url(../assets/images/empresarios\ negociando.jpeg);
+  background-position:center;
+  background-size:cover;
+}
+
+/*Section Title*/
+.section-title{
+  margin-bottom: 60px;
+  font-family: var(--font-secondary);
+  font-weight: 800;
+}
+
+.section-title .line{
+  width: 60px;
+  height: 4px;
+  background-color: var(--c-main);
+  margin: 16px auto 24px auto;
+} 
+
+.section-title h1{
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.section-title p{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font-secondary);
+}
+
+/*Iconbox*/
+.iconbox{
+  width:70px;
+  height:70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  flex: none;
+  margin-right: 1rem;
+}
+
+/*Counter*/
+#counter{
+  background: linear-gradient(rgba(var(--c-main-rgb), 0.8), rgba(var(--c-main-rgb), 0.8));
+  background-position: center;
+  background-size: cover;
+}
+
+/*Reviews*/
+
+.review small {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--c-main);
+}
+
+#reviews img{
+  width:75px;
+  height: 75px;
+}
+
+.review-head{
+  position: relative;
+}
+
+.review-head::after{
+  content: "";
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  bottom: -14px;
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+/* CONTACT */
+#contact {
+  position: relative;
+  z-index: 2;
+}
+
+#contact::after {
+  content: "";
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(rgba(var(--c-main-rgb), 0.8), rgba(var(--c-main-rgb), 0.8)), url(../images/counter.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#contact .form-control {
+  border-radius: 0;
+}
+
+#contact .form-control:focus {
+  box-shadow: none;
+  border-color: var(--c-brand);
+}
+
+/* benefit */
+.benefit {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.benefit::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: rgba(var(--c-main), 0.2);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: var(--transition);
+}
+
+
+.benefit:hover::after {
+  width: 100%;
+  height: 100%;
+  background: var(--c-main);
+  z-index: -1;
+}
+
+.benefit:hover h5,
+.benefit:hover p {
+  color: white;
+}
+
+/* Footer */
+footer {
+  padding-top: 120px;
+}
+
+.footer-top {
+  padding-bottom: 40px;
+  /* border-bottom: 1px solid rgba(255,255,255,0.1); */
+  border-bottom: 1px solid rgba(var(--c-main),0.1);
+}
+
+.footer-bottom {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+footer li,
+footer p,
+footer a {
+  color: rgba(255,255,255,0.7);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .line {
+  width: 40px;
+  height: 4px;
+  background-color: var(--c-main);
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(var(--c-main-rgb), 0.8), rgba(var(--c-main-rgb), 0.8));
+  border-radius: 100px;
+}
+
+.social-icons a:hover {
+  background-color: var(--c-main);
+  color: white;
+}
+
+
+
