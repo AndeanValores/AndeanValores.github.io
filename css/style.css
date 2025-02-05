@@ -68,6 +68,11 @@ a{
   transition: var(--transition)
 }
 
+.colored-text{
+  color: var(--c-main);
+  font-weight: 900;
+}
+
 a:hover{
   color: var(--c-secondary)
 }
@@ -78,8 +83,8 @@ img{
 }
 
 .section-padding{
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .theme-shadow{
@@ -91,14 +96,14 @@ img{
   box-shadow: var(--box-shadow);
 }
 
-.navbar-nav .nav-link{
+.navbar .nav-link{
   font-family: var(--font-secondary);
   font-size: larger;
   font-weight: 500;
 }
 
-.navbar-nav .nav-link:active{
-  color: var(--c-main);
+.nav-link.active{
+  text-decoration: underline;
 }
 
 /*Button*/
@@ -128,15 +133,23 @@ img{
 .btn-color-2:hover{
   background-color: white;
   border-color: var(--c-secondary);
-  color: var(--c-secondary)
+  color: var(--c-secondary);
 }
 
 /*Hero*/
-#hero{
+/* #hero{
   background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.438)), url(../assets/images/empresarios\ negociando.jpeg);
   background-position:center;
   background-size:cover;
+} */
+
+.c-item{
+  height: 700px;
 }
+
+.c-img{
+  filter: brightness(0.6)
+};
 
 /*Section Title*/
 .section-title{
