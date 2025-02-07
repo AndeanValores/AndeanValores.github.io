@@ -62,19 +62,9 @@ h1{
   font-family: var(--font-secondary);
 }
 
-a{
-  text-decoration: none;
-  color: var(--c-main);
-  transition: var(--transition)
-}
-
 .colored-text{
   color: var(--c-main);
   font-weight: 900;
-}
-
-a:hover{
-  color: var(--c-secondary)
 }
 
 img{
@@ -93,7 +83,8 @@ img{
 
 /*Navbar*/
 .navbar{
-  box-shadow: var(--box-shadow);
+  width: 100%;
+  background-color: white;
 }
 
 .navbar .nav-link{
@@ -104,14 +95,19 @@ img{
 
 .nav-link.active{
   text-decoration: underline;
+  text-decoration-color: var(--c-main);
+}
+
+.navbar-brand{
+  left: 0!important;
 }
 
 /*Button*/
 .btn{
   font-weight: 600;
-  font-size: 20px;
+  font-size: 15px;
   font-family: var(--font-secondary);
-  padding: 10px 24px
+  padding: 10px 10px
 }
 
 .btn-color-1{
@@ -144,11 +140,16 @@ img{
 } */
 
 .c-item{
-  height: 700px;
+  height: 500px;
 }
 
 .c-img{
-  filter: brightness(0.6)
+  filter: brightness(0.6);
+  position: absolute;
+  min-height: 500px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 };
 
 /*Section Title*/
