@@ -10,3 +10,45 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
   
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.getElementById('hero-carousel');
+  
+    carousel.addEventListener('slide.bs.carousel', function (event) {
+      // Get the current active slide
+      const currentSlide = event.from;
+      const currentItem = carousel.querySelectorAll('.carousel-item')[currentSlide];
+      const currentHeading = currentItem.querySelector('h1');
+      const currentParagraph = currentItem.querySelector('p');
+  
+      // Add fade-out animations to the current h1 and p
+      currentHeading.classList.remove('animate__fadeInLeftBig');
+      currentHeading.classList.add('animate__fadeOutLeftBig');
+  
+      currentParagraph.classList.remove('animate__fadeInRightBig');
+      currentParagraph.classList.add('animate__fadeOutRightBig');
+    });
+  
+    carousel.addEventListener('slid.bs.carousel', function (event) {
+      // Get the new active slide
+      const newSlide = event.to;
+      const newItem = carousel.querySelectorAll('.carousel-item')[newSlide];
+      const newHeading = newItem.querySelector('h1');
+      const newParagraph = newItem.querySelector('p');
+  
+      // Remove fade-out classes and add fade-in classes to the new h1 and p
+      newHeading.classList.remove('animate__fadeOutLeftBig');
+      newHeading.classList.add('animate__fadeInLeftBig');
+  
+      newParagraph.classList.remove('animate__fadeOutRightBig');
+      newParagraph.classList.add('animate__fadeInRightBig');
+    });
+  
+    // Manually trigger the fade-in animation for the first slide on page load
+    const firstItem = carousel.querySelector('.carousel-item.active');
+    const firstHeading = firstItem.querySelector('h1');
+    const firstParagraph = firstItem.querySelector('p');
+  
+    firstHeading.classList.add('animate__fadeInLeftBig');
+    firstParagraph.classList.add('animate__fadeInRightBig');
+  });

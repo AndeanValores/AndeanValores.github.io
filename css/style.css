@@ -80,6 +80,10 @@ img{
 .theme-shadow{
   box-shadow: var(--box-shadow);
 }
+/*Animations*/
+.animate__animated {
+  --animate-duration: 1.5s; /* Adjust the duration as needed */
+}
 
 /*Navbar*/
 .navbar{
