@@ -231,18 +231,23 @@
       </div>
       <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
         <div class="col-lg-8">
-          <form action="#" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+          <form id="form" action="https://forms.hubspot.com/uploads/form/v2/47375629/4ea2e46a-72e1-4133-9df1-edcadaf6d9f4" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
             <div class="form-group col-lg-6">
-              <input type="text" class="form-control" placeholder="Nombre">
+              <input id="name" name="name" type="text" class="form-control" placeholder="Nombre*" required>
+              <small> <i>*Campo Obligatorio</i></small>
             </div>
             <div class="form-group col-lg-6">
-              <input type="text" class="form-control" placeholder="Apellidos">
+              <input id="phone" name="phone" type="text" class="form-control" placeholder="Celular*" required
+                inputmode="numeric" pattern="\d*" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+              <small> <i>*Campo Obligatorio</i></small>
+            </div>
+            
+            <div class="form-group col-lg-12">
+              <input id="mail" name="mail" type="email" class="form-control" placeholder="Correo Electrónico">
             </div>
             <div class="form-group col-lg-12">
-              <input type="email" class="form-control" placeholder="Correo Electrónico">
-            </div>
-            <div class="form-group col-lg-12">
-              <input type="text" class="form-control" placeholder="Celular">
+              <input id="ruc" name="ruc" type="text" class="form-control" placeholder="RUC" inputmode="numeric"
+                pattern="\d*" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             </div>
             <div class="form-group col-lg-12 d-grid">
               <button class="btn btn-color-1">Enviar</button>
@@ -252,6 +257,7 @@
       </div>
     </div>
   </section>
+  
   <!-- Review -->
   <section id="reviews" class="section-padding bg-light pt-5">
     <div class="container">
@@ -331,6 +337,41 @@
       </div>
     </div>
   </section>
+
+  <!-- Allies -->
+  <section id="allies" class="section-padding pt-5">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="section-title">
+            <h1 class="display-4 fw-semibold">Trabajamos con</h1>
+            <div class="line"></div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="row gy-5 gx-4">
+        <div class="col-lg-4 col-sm-6">
+          <img class="allies-logo" data-aos="zoom-in" src="assets/test company logos/1.png" alt="">
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <img class="allies-logo" data-aos="zoom-in" src="assets/test company logos/2.png" alt="">
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <img class="allies-logo" data-aos="zoom-in" src="assets/test company logos/3.png" alt="">
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <img class="allies-logo" data-aos="zoom-in" src="assets/test company logos/4.png" alt="">
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <img class="allies-logo" data-aos="zoom-in" src="assets/test company logos/5.png" alt="">
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <img class="allies-logo" data-aos="zoom-in" src="assets/test company logos/6.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Footer -->
   <footer class="bg-dark">
     <div class="footer-top">
@@ -393,6 +434,9 @@
   
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="main.js"></script>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/47375629.js"></script>
+  <!-- End of HubSpot Embed Code -->
 </body>
 
 </html>

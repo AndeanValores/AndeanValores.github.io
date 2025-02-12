@@ -339,6 +339,12 @@ img{
   color: white;
 }
 
+/*Allies*/
+.allies-logo{
+  width: auto;
+  height: 150px;
+}
+
 /* Footer */
 footer {
   padding-top: 120px;
