@@ -231,29 +231,24 @@
       </div>
       <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
         <div class="col-lg-8">
-          <form method="POST" id="contact-form" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+          <form method="POST" id="form" action="https://forms.hubspot.com/uploads/form/v2/47375629/4ea2e46a-72e1-4133-9df1-edcadaf6d9f4" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
             <div class="form-group col-lg-6">
-              <input name="firstname" type="text" class="form-control" placeholder="Nombre*" required>
+              <input id="name" name="firstname" type="text" class="form-control" placeholder="Nombre*" required>
               <small> <i>*Campo Obligatorio</i></small>
             </div>
             <div class="form-group col-lg-6">
-              <input name="phone" type="text" class="form-control" placeholder="Celular*" required
+              <input id="phone" name="phone" type="text" class="form-control" placeholder="Celular*" required
                 inputmode="numeric" pattern="\d*" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
               <small> <i>*Campo Obligatorio</i></small>
             </div>
             
             <div class="form-group col-lg-12">
-              <input name="email" type="email" class="form-control" placeholder="Correo Electrónico">
-            </div>
-            <div class="form-group col-lg-12">
-              <input name="name" type="text" class="form-control" placeholder="RUC" inputmode="numeric"
-                pattern="\d*" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+              <input id="mail" name="email" type="email" class="form-control" placeholder="Correo Electrónico">
             </div>
             <div class="form-group col-lg-12 d-grid">
               <button class="btn btn-color-1">Enviar</button>
             </div>
           </form>
-          <div id="thankyou"></div>
         </div>
       </div>
     </div>
@@ -435,8 +430,9 @@
   
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="main.js"></script>
-
-  <script src="send_form.js"></script>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/47375629.js"></script>
+  <!-- End of HubSpot Embed Code -->
   
 </body>
 
