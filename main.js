@@ -58,3 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
 const name = document.getElementById('name');
 const phone = document.getElementById('phone');
 const form = document.getElementById('form');
+
+//FORM CONFIRMATION
+document.getElementById('form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  document.getElementById('confirmation-message').style.display = 'block';
+  this.reset();
+});
