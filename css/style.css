@@ -65,6 +65,7 @@ h1{
 .colored-text{
   color: var(--c-main);
   font-weight: 900;
+  font-size: 3rem;
 }
 
 img{
@@ -132,38 +133,11 @@ img{
 }
 
 /*Button*/
-
-.btn-wrap{
-  margin-top: 3rem;
-}
-
 .btn{
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 800;
+  font-size: 1.125rem;
   font-family: var(--font-secondary);
-  padding: 7px 7px
-}
-
-@media (max-width: 426px){
-  .btn{
-    font-size: 11px;
-    padding: 5px 5px;
-  }
-
-  .btn-wrap{
-    margin-top: 5rem;
-  }
-}
-
-@media (max-width: 376px){
-  .btn{
-    font-size: 11px;
-    padding: 5px 5px;
-  }
-
-  .btn-wrap{
-    margin-top: 4.75rem;
-  }
+  padding: 11px 11px
 }
 
 .btn-color-1{
@@ -207,6 +181,10 @@ img{
   left: 0;
   object-fit: cover;
 };
+
+.subtext{
+  font-size: 1.125rem;
+}
 
 /*Section Title*/
 .section-title{
