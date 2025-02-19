@@ -43,14 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
     newParagraph.classList.remove('animate__fadeOutRightBig');
     newParagraph.classList.add('animate__fadeInRightBig');
   });
-
-  // Manually trigger the fade-in animation for the first slide on page load
-  const firstItem = carousel.querySelector('.carousel-item.active');
-  const firstHeading = firstItem.querySelector('h1');
-  const firstParagraph = firstItem.querySelector('p');
-
-  firstHeading.classList.add('animate__fadeInLeftBig');
-  firstParagraph.classList.add('animate__fadeInRightBig');
 });
 
 
